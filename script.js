@@ -53,7 +53,7 @@ const game = {
       this.result = "draw";
     } else if (
       (playerMove === "rock" && move === "scissors") ||
-      (playermove === "paper" && move === "rock") ||
+      (playerMove === "paper" && move === "rock") ||
       (playerMove === "scissors" && move === "paper")
     ) {
       alert(`The computer chose ${move}, you win!`);
@@ -65,3 +65,17 @@ const game = {
     this.scoreTracker.update(this.result);
   },
 };
+
+//SETUP THE BUTTONS
+document.getElementById("rock").addEventListener("click", () => {
+  game.play("rock");
+});
+document.getElementById("paper").addEventListener("click", () => {
+  game.play("paper");
+});
+document.getElementById("scissors").addEventListener("click", () => {
+  game.play("scissors");
+});
+document.getElementById("reset").addEventListener("click", () => {
+  game.scoreTracker.reset();
+});
