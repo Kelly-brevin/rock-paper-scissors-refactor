@@ -1,3 +1,4 @@
+//LOGIC TO TRACK, UPDATE AND RESET SCORES
 function createScoreTracker() {
   let playerScore = 0;
   let computerScore = 0;
@@ -31,3 +32,36 @@ function createScoreTracker() {
     },
   };
 }
+// GAME LOGIC
+const game = {
+  scoreTracker: createScoreTracker(),
+  computerMove: "",
+  result: "",
+
+  pickComputerMove() {
+    const randomNumber = Math.random();
+    this.computerMove =
+      randomNumber <= 0.3 ? "rock" : randomNumber <= 0.6 ? "paper" : "scissors";
+  },
+
+  play(playerMove) {
+    this.pickComputerMove();
+    const move = this.computerMove;
+
+    if (playerMove === move) {
+      alert(`The computer chose ${move}, it's a draw!`);
+      this.result = "draw";
+    } else if (
+      (playerMove === "rock" && move === "scissors") ||
+      (playermove === "paper" && move === "rock") ||
+      (playerMove === "scissors" && move === "paper")
+    ) {
+      alert(`The computer chose ${move}, you win!`);
+      this.result = "win";
+    } else {
+      alert(`The computer chose ${move}, you lose`);
+      this.result = "lose";
+    }
+    this.scoreTracker.update(this.result);
+  },
+};
