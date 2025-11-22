@@ -50,7 +50,7 @@ const game = {
 
     if (playerMove === move) {
       alert(`The computer chose ${move}, it's a draw!`);
-      this.result = "draw";
+      this.result = "Draw";
     } else if (
       (playerMove === "rock" && move === "scissors") ||
       (playerMove === "paper" && move === "rock") ||
@@ -60,7 +60,7 @@ const game = {
       this.result = "win";
     } else {
       alert(`The computer chose ${move}, you lose`);
-      this.result = "lose";
+      this.result = "Lose";
     }
     this.scoreTracker.update(this.result);
   },
