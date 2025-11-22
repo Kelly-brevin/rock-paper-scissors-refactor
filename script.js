@@ -1,0 +1,24 @@
+function createScoreTracker() {
+  let playerScore = 0;
+  let computerScore = 0;
+  let drawCount = 0;
+
+  return {
+    //the update method has access to the variables in the parent function, creating closure
+    update(result) {
+      if (result === "win") {
+        playerScore++;
+        document.getElementById("playerScore").textContent =
+          "Wins : " + playerScore;
+      } else if (result === "Lose") {
+        computerScore++;
+        document.getElementById("computerScore").textContent =
+          "loses: " + computerScore;
+      } else if (result === "Draw") {
+        drawCount++;
+        document.getElementById("drawCount").textContent =
+          "Draws: " + drawCount;
+      }
+    },
+  };
+}
