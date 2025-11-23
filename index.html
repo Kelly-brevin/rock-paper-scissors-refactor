@@ -3,22 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Optional: Google Font for playful look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h2>ROCK PAPER SCISSORS</h2>
-    <br /><br />
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors"> <img src="" alt="">Scissors</button>
-    <br />
-    <br />
-    <br />
-    <br />
-    <p id="playerScore">Wins:</p>
-    <p id="computerScore">Loses:</p>
-    <p id="drawCount">Draws:</p>
-    <button id="reset">Reset</button>
+    <div class="container">
+      <h2>ROCK PAPER SCISSORS</h2>
+
+      <div class="buttons">
+        <button id="rock">🪨 Rock</button>
+        <button id="paper">📄 Paper</button>
+        <button id="scissors">✂️ Scissors</button>
+      </div>
+
+      <div class="scoreboard">
+        <p id="playerScore">Wins: 0</p>
+        <p id="computerScore">Losses: 0</p>
+        <p id="drawCount">Draws: 0</p>
+      </div>
+
+      <button id="reset" class="reset-btn">Reset</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
