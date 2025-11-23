@@ -1,5 +1,5 @@
 //LOGIC TO TRACK, UPDATE AND RESET SCORES
-function createScoreTracker() {
+function createScoreTracker()   {
   let playerScore = 0;
   let computerScore = 0;
   let drawCount = 0;
@@ -79,3 +79,4 @@ document.getElementById("scissors").addEventListener("click", () => {
 document.getElementById("reset").addEventListener("click", () => {
   game.scoreTracker.reset();
 });
+//use normal functions when you need to use "this"
